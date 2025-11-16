@@ -5,6 +5,13 @@ export function formatarMoeda(valor) {
   });
   const valorFormatado = formatadorReal.format(valor);
 
-  return valorFormatado
+  return valorFormatado;
 }
 
+export function formatString(text) {
+  return text
+    .toLowerCase()    
+    .trim()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '');
+}
